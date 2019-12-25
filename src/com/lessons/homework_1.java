@@ -2,7 +2,7 @@ package com.lessons;
 
 import java.util.Scanner;
 
-public class lesson_1 {
+public class homework_1 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter your first name please");
