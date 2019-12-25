@@ -20,10 +20,7 @@ public class homework_2 {
 
         double distanceTrain2 = timeToCheckPointTrain1*speedTrain2;
 
-        if (distanceTrain2 + checkPoint>distance) {
-            System.out.println("Trains will CRASH");
-        } else{
-            System.out.println("NO crash");
-        }
+        String answer =  (distanceTrain2 + checkPoint>distance) ? "Trains will CRASH" : "NO crash";
+        System.out.println(answer);
     }
 }
