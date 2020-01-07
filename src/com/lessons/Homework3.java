@@ -1,8 +1,11 @@
 package com.lessons;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class homework_3 {
+
+public class Homework3 {
     public static void main(String[] args) {
         int number1 = getInt("first");
         char operation = getOperation();
@@ -17,7 +20,7 @@ public class homework_3 {
         if (s.hasNextInt()){
             number = s.nextInt();
         }else {
-            System.out.println("Something going wrong");
+            System.out.println("Something going wrong with " + num);
             s.next();
             number = getInt(num);
         }

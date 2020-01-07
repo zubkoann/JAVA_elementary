@@ -2,7 +2,7 @@ package com.lessons;
 import java.util.Calendar;
 import java.util.Scanner;
 
-public class task1 {
+public class Task2_1 {
     public static void main(String[] args) {
 //        вывести количество лет
         Scanner s = new Scanner(System.in);

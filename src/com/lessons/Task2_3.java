@@ -2,7 +2,7 @@ package com.lessons;
 
 import java.util.Scanner;
 
-public class task3 {
+public class Task2_3 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter your weight");

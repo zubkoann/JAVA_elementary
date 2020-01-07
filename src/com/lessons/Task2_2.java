@@ -5,7 +5,7 @@ import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
 
 
-public class task2 {
+public class Task2_2 {
     public static void main(String[] args) {
         double side1;
         double side2;
