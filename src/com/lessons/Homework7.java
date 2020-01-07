@@ -7,8 +7,11 @@ public class Homework7 {
         Scanner s = new Scanner(System.in);
         int number;
         String matches = "";
+        String text = "";
+
         System.out.println("Please enter number");
         number = s.nextInt();
+
 
         while (number > 0) {
             int k = number % 10;
@@ -28,19 +31,24 @@ public class Homework7 {
                         }
                     }
 
-                    if (count == 0) matches += l;
+                    if (count == 0) {
+                        matches += l;
+                    }
                     break;
-
                 } else {
                     l = number2 % 10;
                     number2 = number2 / 10;
                 }
             }
         }
+        for (int i = 0; i < matches.length(); i++) {
+            text = (i < matches.length() - 1) ? text + matches.charAt(i) + ", " : text + matches.charAt(i) + ".";
+        }
 
-        if (matches.length() > 0)
-            System.out.println("Tere is match at " + matches);
-        else
-            System.out.println("Tere is NO matches" + 0 % 10);
+        if (matches.length() > 0) {
+            System.out.println("There is match at " + text);
+        } else {
+            System.out.println("There is NO matches");
+        }
     }
 }
