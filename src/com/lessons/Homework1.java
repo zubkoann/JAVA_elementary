@@ -11,6 +11,6 @@ public class Homework1 {
         String middle_name = s.nextLine();
         System.out.println("Enter your last name please");
         String last_name = s.nextLine();
-        System.out.println(last_name+' '+first_name+' '+middle_name);
+        System.out.println(last_name + ' ' + first_name + ' ' + middle_name);
     }
 }

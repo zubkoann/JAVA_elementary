@@ -13,52 +13,56 @@ public class Homework3 {
         int result = calc(number1, number2, operation);
         System.out.println("RESULT: " + result);
     }
+
     static Scanner s = new Scanner(System.in);
-    static int getInt(String num){
+
+    static int getInt(String num) {
         System.out.println("Enter " + num + " number");
         int number;
-        if (s.hasNextInt()){
+        if (s.hasNextInt()) {
             number = s.nextInt();
-        }else {
+        } else {
             System.out.println("Something going wrong with " + num);
             s.next();
             number = getInt(num);
         }
-        return  number;
+        return number;
     }
-    static  char getOperation(){
+
+    static char getOperation() {
         System.out.println("Enter operation");
         char operation;
-        if (s.hasNext()){
+        if (s.hasNext()) {
             operation = s.next().charAt(0);
-        }else {
+        } else {
             System.out.println("Something going wrong");
             s.next();
             operation = getOperation();
         }
-        return  operation;
+        return operation;
     }
-    static  int calc(int number1, int number2, char operation){
+
+    static int calc(int number1, int number2, char operation) {
         int result;
-        switch (operation){
+        switch (operation) {
             case '+':
-                result =   number1 + number2;
+                result = number1 + number2;
                 break;
             case '-':
-                result =   number1 - number2;
+                result = number1 - number2;
                 break;
             case '/':
-                result =   number1 / number2;
+                result = number1 / number2;
                 break;
             case '*':
-                result =   number1 * number2;
+                result = number1 * number2;
                 break;
             case '%':
-                result =   number1 % number2;
+                result = number1 % number2;
                 break;
             default:
                 System.out.println("Operation is wrong");
-                result = calc( number1,  number2, getOperation());
+                result = calc(number1, number2, getOperation());
         }
         return result;
     }

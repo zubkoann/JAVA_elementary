@@ -1,4 +1,5 @@
 package com.lessons;
+
 import java.util.Scanner;
 
 public class Homework2 {
@@ -16,11 +17,11 @@ public class Homework2 {
         System.out.println("Enter checkPoint");
         float checkPoint = s.nextInt();
 
-        float timeToCheckPointTrain1 = checkPoint/speedTrain1;
+        float timeToCheckPointTrain1 = checkPoint / speedTrain1;
 
-        float distanceTrain2 = timeToCheckPointTrain1*speedTrain2;
+        float distanceTrain2 = timeToCheckPointTrain1 * speedTrain2;
 
-        String answer =  (distanceTrain2 + checkPoint>distance) ? "Trains will CRASH" : "NO crash";
+        String answer = (distanceTrain2 + checkPoint > distance) ? "Trains will CRASH" : "NO crash";
         System.out.println(answer);
     }
 }
