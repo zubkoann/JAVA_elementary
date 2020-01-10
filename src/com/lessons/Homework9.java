@@ -54,7 +54,7 @@ public class Homework9 {
         for (int i = 0; i < array.length; i++) {
             int a = rand.nextInt(diff + 1) + min;
             array[i] = a;
-            if (a % 2 == 1) {
+            if (i % 2 == 1) {
                 array2[i] = 0;
             } else {
                 array2[i] = a;
