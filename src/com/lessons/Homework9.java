@@ -2,10 +2,8 @@ package com.lessons;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Homework9 {
-    public static final Scanner s = new Scanner(System.in);
     public static final Random rand = new Random();
 
     public static void main(String[] args) {
