@@ -17,5 +17,6 @@ public class Task2_2 {
         side2 = s.nextDouble();
         hypot = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2));
         System.out.println("hypotinuza is " + hypot);
+
     }
 }

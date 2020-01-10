@@ -9,5 +9,5 @@ public class Task2_3 {
         double weight = s.nextDouble();
         double weightMoon = weight * 0.17;
         System.out.println("You weight at Moon " + weightMoon);
-        }
+    }
 }
