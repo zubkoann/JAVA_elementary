@@ -21,9 +21,11 @@ public class Homework11 {
 //        getTask9();
 //        getTask10();
 //        getTask11();
-        int[] array = getTask12();
-        getTask13(array);
-        getTask14();
+//        int[] array = getTask12();
+//        getTask13(array);
+//        getTask14();
+//        getTask15();
+        getTask16();
 
 
     }
@@ -62,41 +64,26 @@ public class Homework11 {
             month = s.nextInt();
             switch (month) {
                 case 1:
-                    System.out.println("Winter");
-                    break;
                 case 2:
+                case 12:
                     System.out.println("Winter");
                     break;
                 case 3:
-                    System.out.println("Spring");
-                    break;
                 case 4:
-                    System.out.println("Spring");
-                    break;
                 case 5:
                     System.out.println("Spring");
                     break;
                 case 6:
-                    System.out.println("Summer");
-                    break;
                 case 7:
-                    System.out.println("Summer");
-                    break;
                 case 8:
                     System.out.println("Summer");
                     break;
                 case 9:
-                    System.out.println("Autumn");
-                    break;
                 case 10:
-                    System.out.println("Autumn");
-                    break;
                 case 11:
                     System.out.println("Autumn");
                     break;
-                case 12:
-                    System.out.println("Winter");
-                    break;
+
                 default:
                     System.out.println("You have entered wrong month");
                     break;
@@ -189,36 +176,29 @@ public class Homework11 {
     //    https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
     //    Пользователь вводит 2 катета прямоугольного треугольника. Найти гипотенузу.
     private static void getTask8() {
-        double katet1;
-        double katet2;
-        double gepatenuza;
+        double cathet1;
+        double cathet2;
+        double hepatenosis;
         System.out.println("Katet 1");
-        katet1 = s.nextDouble();
+        cathet1 = s.nextDouble();
         System.out.println("Katet 2");
-        katet2 = s.nextDouble();
+        cathet2 = s.nextDouble();
 
-        gepatenuza = Math.sqrt(Math.pow(katet1, 2) + Math.pow(katet2, 2));
-        System.out.println("gepatenuza " + gepatenuza);
+        hepatenosis = Math.hypot(cathet1, cathet2);
+        System.out.println("gepatenuza " + hepatenosis);
     }
 
     //  9) Пользователь вводит 2 числа a,b. Вывести целое случайное число в диапазоне a..b включительно
     private static void getTask9() {
-        int max;
-        int min;
-        int diff;
-        int a;
-        int b;
-        int i;
-
         System.out.println("Enter number 1 ");
-        a = s.nextInt();
+        int a = s.nextInt();
         System.out.println("Enter number 2 ");
-        b = s.nextInt();
+        int b = s.nextInt();
 
-        max = Math.max(b , a);
-        min = Math.min(a , b);
-        diff = max - min;
-        i = rand.nextInt(diff + 1) + min;
+        int max = Math.max(b, a);
+        int min = Math.min(a, b);
+        int diff = max - min;
+        int i = rand.nextInt(diff + 1) + min;
 
         System.out.println("Random " + i);
     }
@@ -239,8 +219,8 @@ public class Homework11 {
         int[] array = new int[10];
         String stringArray;
 
-        for (int k = 0; k < array.length; k++) {
-            array[k] = array.length - k;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = array.length - i;
         }
 
         stringArray = Arrays.toString(array);
@@ -288,11 +268,11 @@ public class Homework11 {
 
         int count = 0;
 
-        for (int k = 0; k < array.length; k++) {
-            count += array[k];
+        for (int i = 0; i < array.length; i++) {
+            count += array[i];
         }
 
-        System.out.println("average: " + count / array.length);
+        System.out.println("average: " + (double) count / array.length);
     }
 
     //14*) Простая игра и цикл while:
@@ -324,6 +304,48 @@ public class Homework11 {
 
 
     }
+//    1) Написать программу которая решает квадратное уравнение вида a*x*x + b*x + c = 0, где заданы a,b,c.
 
+    private static void getTask15() {
+
+        double a, b, c;
+        double D;
+
+        System.out.println("Enter a, b и c:");
+        a = s.nextDouble();
+        b = s.nextDouble();
+        c = s.nextDouble();
+
+        D = b * b - 4 * a * c;
+        System.out.println(D);
+
+        if (D > 0) {
+            double x1, x2;
+            x1 = (-b - Math.sqrt(D)) / (2 * a);
+            x2 = (-b + Math.sqrt(D)) / (2 * a);
+            System.out.println(" x1 = " + x1 + ", x2 = " + x2);
+        } else if (D == 0) {
+            double x;
+            x = -b / (2 * a);
+            System.out.println(" x = " + x);
+        } else {
+            System.out.println("no roots of the equation");
+        }
+
+    }
+
+
+    //    Написать программу которая вычисляет значения корня квадратного без использования библиотечных методов типа Math.sqrt().
+//    Например методом половинного деления.
+    public static void getTask16() {
+        int number = 100;
+        double t;
+        double squareRoot = number / 2;
+        do {
+            t = squareRoot;
+            squareRoot = (t + (number / t)) / 2;
+        } while ((t - squareRoot) != 0);
+        System.out.println(squareRoot);
+    }
 
 }
