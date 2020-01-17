@@ -12,7 +12,7 @@ public class Homework12_4 {
     public static void main(String[] args) {
         int iterationLeibniz = (int) iterPiLeibniz(0.001);
         int iterationNicolaz = (int) iterPiNicolaz(0.001);
-        String text = (iterationNicolaz > iterationLeibniz) ? "ряд Нилаканта" : "ряд Лейбница";
+        String text = (iterationNicolaz < iterationLeibniz) ? "ряд Нилаканта" : "ряд Лейбница";
 
         System.out.println(text);
 
@@ -41,9 +41,9 @@ public class Homework12_4 {
 
         while (Math.abs(Math.PI - myPi) > epsilon) {
             myPi += (n % 2 == 0 ? 1 : -1) * 4.0 / (a * b * c);
-            a += 1;
-            b += 1;
-            c += 1;
+            a += 2;
+            b += 2;
+            c += 2;
             n++;
         }
         return n;
