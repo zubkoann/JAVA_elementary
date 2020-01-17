@@ -35,15 +35,11 @@ public class Homework12_4 {
     public static double iterPiNicolaz(double epsilon) {
         double myPi = 3;
         int a = 2;
-        int b = 3;
-        int c = 4;
         int n = 0;
 
         while (Math.abs(Math.PI - myPi) > epsilon) {
-            myPi += (n % 2 == 0 ? 1 : -1) * 4.0 / (a * b * c);
+            myPi += (n % 2 == 0 ? 1 : -1) * 4.0 / (a * (a + 1) * (a + 2));
             a += 2;
-            b += 2;
-            c += 2;
             n++;
         }
         return n;
