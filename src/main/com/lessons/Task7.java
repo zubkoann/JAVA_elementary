@@ -1,8 +1,11 @@
 package com.lessons;
 
+import java.util.Arrays;
+
 public class Task7 {
     public static void main(String[] args) {
-        getTask1();
+//        getTask1();
+        getTask2("i love java");
     }
 
     /**
@@ -25,6 +28,24 @@ public class Task7 {
                 System.out.printf("%s ", i);
             }
         }
-
     }
+
+
+    /**2) Написать метод.
+    Входящий параметр:
+    Строка со словами разделенными пробелом которые состоят из больших и маленьких букв.
+    Метод должен вернуть ту же строку в которой первая буква в каждом слове большая, а остальные маленьк
+     */
+
+    public static void getTask2(String str) {
+        String[] array =str.split("\\s");
+        StringBuilder str2 = new StringBuilder();
+        for (String word:array){
+            String a = word.substring(0,1).toUpperCase();
+            String b = word.substring(1, word.length());
+            str2.append(a).append(b+ " ");
+        }
+        System.out.println(str2);
+    }
+
 }
