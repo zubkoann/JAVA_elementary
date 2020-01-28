@@ -23,7 +23,6 @@ public class Homework15 {
         return array;
     }
 
-    int[] timeArray = new int[3];
 
     /**
      * 1) Вывести в 1 строку через пробел все числа от 1 до 99 со следующими изменениями:
