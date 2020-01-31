@@ -206,7 +206,47 @@ public class Homework15 {
     }
 
      /**      * Heap, */
+     static void heapSort(int[] array, int length, int i) {
+         int leftChild = 2*i+1;
+         int rightChild = 2*i+2;
+         int largest = i;
 
+         // если левый дочерний больше родительского
+         if (leftChild < length && array[leftChild] > array[largest]) {
+             largest = leftChild;
+         }
+
+         // если правый дочерний больше родительского
+         if (rightChild < length && array[rightChild] > array[largest]) {
+             largest = rightChild;
+         }
+
+         // если должна произойти замена
+         if (largest != i) {
+             int temp = array[i];
+             array[i] = array[largest];
+             array[largest] = temp;
+             heapSort(array, length, largest);
+         }
+     }
+
+    public static void getHeapSort(int[] array) {
+        if (array.length == 0) return;
+
+        // Строим кучу
+        int length = array.length;
+        // проходим от первого без ответвлений к корню
+        for (int i = length / 2-1; i >= 0; i--)
+            heapSort(array, length, i);
+
+        for (int i = length-1; i >= 0; i--) {
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+
+            heapSort(array, i, 0);
+        }
+    }
 
 
      /**      * Merge*/
@@ -269,7 +309,7 @@ public class Homework15 {
      * 6*) Сравнить все сортировки по быстродействию, результат предоставить например в excel или google doc
      */
     public static void getFastesSortMethod() {
-        String[] methodNames = {"BubbleSort", "InsertSort", "SelectSort", "QuickSort", "mergeSort"};
+        String[] methodNames = {"BubbleSort", "InsertSort", "SelectSort", "QuickSort", "mergeSort", "HeapSort"};
         long[] timeArray = new long[methodNames.length];
 
         timeArray[0] = getBubbleSort();
@@ -293,7 +333,17 @@ public class Homework15 {
         finish = System.nanoTime();
         timeConsumedMillis = finish - start;
         timeArray[4] = timeConsumedMillis;
-        System.out.println("mergeSort " + Arrays.toString(arrayQuickSort));
+        System.out.println("mergeSort " + Arrays.toString(arrayMergeSort));
+        System.out.println("time " + timeConsumedMillis);
+
+        int[] arrayHeapSort = getArray();
+        System.out.println(Arrays.toString(arrayHeapSort));
+        start = System.nanoTime();
+        getHeapSort(arrayHeapSort);
+        finish = System.nanoTime();
+        timeConsumedMillis = finish - start;
+        timeArray[5] = timeConsumedMillis;
+        System.out.println("HeapSort " + Arrays.toString(arrayQuickSort));
         System.out.println("time " + timeConsumedMillis);
 
 
@@ -306,7 +356,7 @@ public class Homework15 {
                 indexOfMin = i;
             }
         }
-        System.out.println("Max-  " + methodNames[indexOfMax] + ", time - " + timeArray[indexOfMax] + ". Min -"
+        System.out.println("Max time -  " + methodNames[indexOfMax] + ", time - " + timeArray[indexOfMax] + ". Min time  -"
                 + methodNames[indexOfMin] + ", time - " + timeArray[indexOfMin]);
     }
 
