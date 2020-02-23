@@ -26,7 +26,6 @@ public class Person {
             }
             height = Math.round(height * 100.0) / 100.0;
             int weight = (int) (height * 100 - 130 + rand.nextInt(51));
-
             persons.add(new Person(nameArray[rand.nextInt(nameArray.length)], surnameArray[rand.nextInt(surnameArray.length)], age, weight, height));
         }
         for (Person p : persons) {
