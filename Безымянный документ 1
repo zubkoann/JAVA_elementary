@@ -1,0 +1,80 @@
+Домашнее задание 19
+Добавлено: 23.02.2020 16:13
+Дз14
+Дан файл с датами например:
+
+01.01.2018 - 30.01.2018
+10.05.2018 - 15.05,2018
+01.01.2020
+Нужна написать программу которая будет определять легально человек находится в евросоюзе или нет, а даты это его время заездов - выездов.
+
+Человек может находится в евросоюзе не более 90 дней за последние пол года (180 дней).
+
+1) проверить что даты в файле допустимые
+
+2) ответить на вопрос - легально ди человек находится в еврозоне, если да то сколько дней до истечения у него осталось. Если нет то на сколько дней просрочен.
+
+OOP
+1) Exceptions
+
+try-catch-finally
+try-with-resources
+multiply catch
+Exceptions hierarchy
+Checked and Unchecked exceptions
+Custom Exceptions
+https://www.baeldung.com/java-try-with-resources
+
+https://stackoverflow.com/a/39607374
+
+https://gist.github.com/akadatsky/e8cb16c58135986d0799749f1c93fcf4
+
+
+
+2) Date/Time
+
+2 формата хранения:
+
+1) Unix time
+
+2) timestamp - "yyyy-MM-dd'T'hh:mm:ssZ"
+
+a) Java 7 - Date/Calendar
+
+b) Java 8 - package java.time
+
+https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html
+
+https://gist.github.com/akadatsky/c78b91bacc01b8383dbfe791845f8e65
+
+
+
+DateFormat:
+
+https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+
+
+
+3) abstract
+
+https://gist.github.com/akadatsky/fb33a76f41338ec8cec10287af2ce5c0
+
+
+
+4) implements
+
+https://gist.github.com/akadatsky/b6cd0787c3fe3a4f0c105c71cf114d0c
+
+
+
+5) Абстрактный класс VS interface
+
+6) Полиморфизм
+
+a) перегрузка
+
+b) переопределение (динамические полиморфизм)
+
+
+
+6) Сравнение ООП в Java и С
